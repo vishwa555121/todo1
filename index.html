@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List with Calendar</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>To-Do List</h1>
+    </header>
+    <main>
+      <div class="input-area">
+        <input type="text" id="todo-input" placeholder="Add a new task..." />
+        <!-- Date is optional; if left blank, current date is used -->
+        <input type="date" id="task-date" />
+        <input type="number" id="task-hours" placeholder="Hours (optional)" min="0" max="12" />
+        <input type="number" id="task-minutes" placeholder="Minutes (optional)" min="0" max="59" />
+        <input type="number" id="task-seconds" placeholder="Seconds (optional)" min="0" max="59" />
+        <select id="task-am-pm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <button id="add-btn">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+      <button id="show-time-remaining" disabled>Show Time Remaining</button>
+      <button id="history-btn">Show History</button>
+      <div id="history-area" style="display: none;">
+        <h3>Task History</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </main>
+  </div>
+
+  <!-- Popup Notification Modal -->
+  <div id="popup-notification" class="popup">
+    <div class="popup-content">
+      <span class="close" id="popup-close">&times;</span>
+      <p id="popup-message"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Designed by
+      <a href="https://www.instagram.com/vishwachakma" target="_blank">
+        Vishwa Chakma
+      </a>
+    </p>
+    <p>
+      Follow me on Instagram:
+      <a href="https://www.instagram.com/vishwachakma" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </p>
+  </footer>
+
+  <script src="script1.js"></script>
+</body>
+</html>
